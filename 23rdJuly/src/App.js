@@ -74,10 +74,12 @@ function App() {
         <header>
           <Menu/>
         </header>
-        <Gender/>
+
+        <GenderAPI/>
         <Products/>
+
         <footer>
-        <Footer/>
+          <Footer/>
        </footer> 
       </div>
     );

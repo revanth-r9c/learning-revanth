@@ -5,9 +5,10 @@ function GenderAPI(){
     function search(){
         let value=document.querySelector("input").value;
         let url="https://api.genderize.io/?name="+value;
-        fetch(url)
+        axios.get(url)
         .then(function(response){
-            console.log(response.value);
+            console.log(response.data);
+            alert(JSON.stringify(response.data["gender"]));
         })
         .catch(function(error){
             console.log(error);
