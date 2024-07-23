@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            background-color:beige;
+        }
+        h1{
+            border: 2px dashed red ;
+            text-align: center;
+        }
+        #outer-div{
+            display: flex;
+            justify-content: space-evenly;
+            border: 2px solid black;
+            padding: 20px;
+        }
+        .inner{
+            padding: 20px;
+        }
+        footer{
+            text-align: center;
+        }
+        input{
+            margin:5px;
+            height: 27px;
+            width: 80%;
+            border-radius: 5px;
+            border:2px solid black;
+        }
+        button{
+            margin:5px;
+            border-radius: 5px;
+        }
+        #inner2 *{
+            background-color:antiquewhite;
+            padding-left: 25px;
+        }
+    </style>
+</head>
+<body>
+    <header><h1>&#10084;    Welcome to ITC Hotels    &#10084;</h1></header>
+    <main>
+        <div id="outer-div">
+            <div class="inner"><img src="6599599.jpg" alt="Hotel-Pic" height="400px"></div>
+            <div class="inner" id="inner2">
+                <form action="#">
+                    <input type="text" placeholder="Visitor Name" required><br>
+                    <input type="tel" placeholder="Mobile Number" required><br>
+                    <input type="text" placeholder="Aadhar Number" required><br>
+                    <input type="number" placeholder="Age" required><br>
+                    <input type="email" placeholder="Email address"><br>
+                    <label for="datetime-id">Incoming Date & Time (eg. 2024-01-01 09.00.00)</label>
+                    <input type="datetime" id="datetime-id"><br>
+                    <label for="date-id">&nbsp;  Depature Date</label>
+                    <input type="date" id="date-id"><br>
+                    <label for="options1">Type of Room You Want</label>
+                    <input list="options" id="options1">
+                    <datalist id="options">
+                        <option value="1BHK"></option>
+                        <option value="2BHK"></option>
+                        <option value="3BHK"></option>
+                        <option value="Dorm Beds"></option>
+                    </datalist><br>
+                    <label for="capacity">Rate our Hospitality</label>
+                    <input id="capacity" type="range" min=1 max=7><br>
+                    <button onclick="success" style="background-color: white;">submit</button>
+                    <button type="reset" style="background-color: white;">Reset</button>
+                </form>
+            </div>
+        </div>
+    </main>
+    <footer>Made with &#128154; by Revanth<br>Copyright&#169; 2024</footer>
+    <script>
+        function success(){
+            alert("Form submitted successfully!!");
+        }
+    </script>
+</body>
+</html>

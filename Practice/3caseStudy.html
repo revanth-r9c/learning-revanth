@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let temp1 =10;
+        let temp2= 20.5;
+        let totalTemp=temp1+temp2;
+        alert(`Total Temperature of room: ${totalTemp}`);
+
+        let email="revanthbollepalli919@gmail.com";
+        let isValidEmail=email.includes('@');
+        if(isValidEmail==false){
+            alert("Invalid format");
+        }
+        else{
+            alert("Email inserted successfully");
+        }
+
+        let currentUser;
+        function logoutUser(){
+            currentUser=undefined;
+        }
+        if(currentUser===undefined){
+            alert("No user logged in.");
+        }
+        else{
+            alert("Logged in user: ",currentUser);
+        }
+    </script>
+</body>
+</html>

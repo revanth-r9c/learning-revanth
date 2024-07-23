@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let courses=[
+            {
+                "Name":"HTML",
+                "Tutor":"Sumit",
+                "Capacity":12,
+                "Location":"Bangalore"
+            },
+            {
+                "Name":"MERN STACK",
+                "Tutor":"Kohli",
+                "Capacity":22,
+                "Location":"Chennai"
+            }
+        ];
+        let newCourse={
+            "Name":"Spring Bot",
+            "Tutor":"Kohli",
+            "Capacity":22,
+            "Location":"Chennai"
+        };
+        courses.unshift(newCourse);
+        let delCourse=courses.pop();
+        let cor=courses.find(cor=>cor.Tutor==="Kohli");
+        alert(cor.Location);
+        let sizes=courses.map(cor=>{
+            if(cor.capacity<=3){
+                return "small";
+            }
+            if(cor.capacity<=5){
+                return "medium";
+            }
+            return "large"
+        });
+        alert(sizes);
+
+        courses.forEach(cor=>{
+            car['size']="large";
+            if(cor.Capacity<=5){
+                cor['size']="medium";
+            }
+            if(cor.Capacity<=3){
+                cor['size']='small';
+            }
+        });
+
+        let arr=[10,20,30,40,50,60];
+        alert(arr);
+        arr.splice(2,1,24,25);
+        alert(arr);
+    </script>
+</body>
+</html>

@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        main{
+          border: 2px solid blue;
+          padding:10px;
+          margin-top: 10px;
+        }
+        #menu{
+          border: 2px solid black;
+          padding:20px;
+        }
+        #menu a{
+          border: 2px solid green;
+          padding:10px;
+        }
+        a{
+          text-decoration: none;
+        }
+      </style>
+</head>
+<body>
+    <figure>
+        <img src="changu.jpeg" alt="changu lake"/>
+        <figcaption>Amazon Changu Lake</figcaption>
+    </figure>
+      <header>
+        <nav>
+          <div id="menu">
+            <a href="/home.html">Home</a>
+            <a href="/about.html">About</a>
+            <a href="/contact-us.html">Contact Us</a>
+          </div>
+        </nav>
+      </header>
+      <main>
+        <section id="top-news">
+          <article id="rain-div">
+            <h1>Heavy rain in bangalore</h1>
+            <div>Heavy rains in Bangalore. Most areas effected. 
+                <footer>By Sumit Kohli</footer> 
+            </div>
+          </article>
+          <article>
+            <h1>
+              Bangalore has many job openings</h1>
+            <div>
+              Economy is opening. Bangalore is getting many people moving back again
+              <footer>Author: By Sumit Kohli.</footer> 
+            </div>
+          </article>
+        </section>
+      </main>
+      <footer>
+        <header>footer</header>
+        <nav>
+            <a href="/policy.html">Policy</a>
+            <a href="/privacy.html">Privacy</a>
+        </nav>
+      </footer>
+    <script>
+        let articleOb=document.getElementById("rain-div");
+        articleOb.style.color="red";
+        articleOb.style.border="4px solid black";
+        articleOb.textContent="Where the content gone??";
+        articleOb.style.marginLeft="100px";
+        articleOb.onclick=function(){
+            alert("Did u click me?");
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS-TASK</title>
+    <style>
+        body{
+            background-image: url(background_page.png);
+            background-repeat: repeat-x;
+        }
+        .outer{
+            margin: 40px 150px;
+            border: 1px solid black;
+        }
+        img{
+            width: 100%;
+            height:200px;
+        }
+        h2,h3{
+            text-align: center;
+        }
+        #side-menu{
+            margin: 20px;
+            border: 1px solid black;
+            float:left;
+            width:20%;
+        }
+        #para{
+            margin: 20px;
+            border: 1px solid black;
+            float:right;
+            width:71%;
+        }
+        .clearfix::after{
+            content: "";
+            display: table;
+            clear: both;
+        }
+        p{
+            padding: 10px;
+            text-align: justify;
+        }
+        footer{
+            text-align: center;
+            padding: 10px;
+        }
+        a{
+            text-decoration: none;
+        }
+       @media(max-width:580px){
+            #side-menu,#para{
+                float: none;
+                width:90%;
+            }
+            .outer{
+                margin: 5px;
+            }
+        }
+        @media(min-width:581px) and (max-width:768px){
+            #side-menu,#para{
+                float: none;
+                width:90%;
+            }
+            .outer{
+                margin: 5px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="outer">
+        <img src="banner.jpg" alt="Banner">
+        <h2>A simple layout using html and css</h2>
+        <div class="clearfix">
+            <div id="side-menu">
+                <h3>Side menu</h3>
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">About Us</a></li>
+                    <li><a href="#">Contact Us</a></li>
+                    <li><a href="#">Recent news</a></li>
+                    <li><a href="#">Brief History</a></li>
+                    <li><a href="#">Team Details</a></li>
+                </ul>
+            </div>
+            <div id="para">
+                <h3>About css</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus non atque numquam iusto corporis. Vero quasi ab vel quia neque exercitationem suscipit, maxime sequi. Rerum facere amet fugiat recusandae itaque!
+                Iure itaque pariatur hic fugiat cupiditate mollitia recusandae repudiandae vero accusamus fuga, voluptatem voluptatibus quisquam debitis molestias laborum tempore officia! Nulla iure consequuntur deserunt praesentium quod atque laudantium molestiae qui!
+                Autem quas earum voluptate quibusdam similique ea sed? Iure magni, consequuntur expedita cupiditate alias obcaecati similique quo! Mollitia esse corporis ad atque voluptas quidem eos. Quae hic quaerat laudantium culpa.
+                Recusandae voluptates officia dicta, quas sunt expedita suscipit voluptatem odit labore sint esse ullam quisquam provident cum reprehenderit, eveniet nemo soluta dolor! Similique pariatur, delectus accusantium iure doloribus vel sapiente.
+                Reprehenderit in necessitatibus voluptates eos officia praesentium itaque nobis veritatis quod nesciunt vero modi delectus dicta officiis eius hic repellendus quibusdam maiores libero, dolore consequuntur sunt aperiam quaerat molestiae! Veniam?
+                Voluptatum ad doloribus, illo deleniti amet itaque porro dolorum tenetur ullam neque quos esse, molestias magni dolore. Ipsa voluptate neque, ducimus a deserunt odit, ad nihil labore laborum, vitae fuga?
+                Nisi, ut modi. Vitae similique inventore amet. Nobis adipisci officiis, id cum quae nam quis maxime in error molestiae ipsam modi sed sit quia molestias, at neque a, suscipit dolores!
+                Debitis laudantium saepe eius, neque molestias porro pariatur minus excepturi praesentium iure error incidunt velit facere aspernatur asperiores accusantium nostrum vero itaque tempore odit blanditiis quo! Officiis praesentium eos non?
+                Quidem quam magnam vitae fugit accusantium harum aliquam ipsa officiis velit, molestiae esse similique laudantium dicta cumque blanditiis vel praesentium cum? Ipsa officia odit doloremque. Nulla velit cupiditate alias ducimus!
+                Dicta sunt hic reiciendis quae magnam omnis fugiat! Quaerat dolor provident cupiditate, autem ab, assumenda libero exercitationem blanditiis adipisci dolore omnis voluptate aut non, minima recusandae amet nisi quae fugit!
+                Est doloribus necessitatibus error voluptas earum et quasi sit nemo architecto voluptate, modi natus! Nam, reprehenderit libero sint cum non suscipit odio, pariatur ab laudantium, saepe recusandae labore! Aperiam, harum.
+                Dolorum molestiae rem porro a ex? Accusantium repellat facere tempora ducimus mollitia, ab deleniti exercitationem libero itaque officiis molestiae fugiat. Exercitationem ab debitis iusto cum iure necessitatibus alias velit nostrum?
+                Magni odit deserunt facere, beatae, earum nemo enim saepe vero sunt provident tenetur atque obcaecati illum minima consectetur autem voluptatibus aut blanditiis laudantium quos a in at qui ut! Consequuntur?
+                Sed reprehenderit quia exercitationem ex repellendus omnis numquam deserunt velit illum a impedit similique tempore, reiciendis itaque alias expedita saepe magni molestias, quasi cumque distinctio pariatur! Neque, pariatur. Placeat, amet.
+                Inventore deleniti error voluptates repellat praesentium vitae mollitia cum quibusdam rem atque esse, consectetur reiciendis dolorum eligendi est, eius expedita. Non saepe at laudantium, nesciunt dolore sapiente numquam ipsum quisquam?
+                </p>
+            </div>
+        </div>
+        <hr>
+        <footer>Copyright 2010, Some Company</footer>
+    </div>
+</body>
+</html>

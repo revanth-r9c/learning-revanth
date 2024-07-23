@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function invokeSum(a,b)
+        {
+            return a()+b();
+        }
+        function returnOne(){
+            return 1;
+        }
+        function returnTwo(){
+            return 2;
+        }
+        alert(invokeSum(returnOne,returnTwo));
+    </script>
+</body>
+</html>

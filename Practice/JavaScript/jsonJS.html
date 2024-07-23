@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let students=["Chandni","Harsh","Revanth"];
+        console.log(typeof(students));
+        let studentsJSON=JSON.stringify(students);
+        console.log(studentsJSON);
+        console.log(typeof(studentsJSON));
+        let convertedBackData=JSON.parse(studentsJSON);
+        console.log(typeof(convertedBackData));
+        let manualJsonStudents='["Chandni","Harsh","Revanth"]';
+        let convertedBackDataOne=JSON.parse(manualJsonStudents);
+        console.log(typeof(manualJsonStudents));
+        console.log(convertedBackDataOne[1]);
+    </script>
+</body>
+</html>

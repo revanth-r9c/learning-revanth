@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="mydiv">
+        My Div
+        <h1>Heading inside Div</h1>
+    </div>
+    <div class="myclass">My Div</div>
+    <h1>Hello H1</h1>
+    <h1>Hello H2</h1>
+    <script>
+        let mydivOb=document.querySelector("#mydiv");
+        let myclassOb=document.querySelector(".myclass");
+        let firstH1TagOb=document.querySelector("h1");
+        alert(mydivOb.textContent);
+        alert(myclassOb.textContent);
+        alert(firstH1TagOb.textContent);
+
+        let h1TagAll=document.querySelectorAll("h1");
+        h1TagAll[0].style.color="green";
+        let h1TagInsideDiv=document.querySelector("#mydiv h1");
+        h1TagInsideDiv.style.color="green";
+    </script>
+</body>
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" name="student"/>
+    <button onclick="addStudent()">Store Student name</button>
+    <button onclick="showStudents()">Show All Studnet names</button>
+    <button onclick="removeStudents()">Remove all students</button>
+    <script>
+        let arr=[];
+        function addStudent(){
+            let inputOb=document.querySelector("input");
+            let name=inputOb.value;
+            arr.push(name);
+            alert("Student Name stored Successfully!!!");
+        }
+        function showStudents(){
+            let nameJSON=JSON.stringify(arr);
+            localStorage.setItem("stu",nameJSON);
+            let x=localStorage.getItem("stu");
+            alert(x);
+        }
+        function removeStudents(){
+            localStorage.clear();
+            alert("Students removed successfully");
+        }
+    </script>
+</body>
+</html>

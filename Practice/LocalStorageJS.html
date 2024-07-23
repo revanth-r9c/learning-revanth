@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" name="training_location"/>
+    <button onclick="storeTrainingLocation()">Store training Location</button>
+    <button onclick="showLocation()">Show Location</button>
+    <script>
+        function storeTrainingLocation(){
+            let inputOb=document.querySelector("input");
+            let training_location=inputOb.value;
+            localStorage.setItem("training_location",training_location);
+            alert("training location stored");
+        }
+        function showLocation(){
+            let trainingLocation=localStorage.getItem("training_location");
+            alert(trainingLocation);
+        }
+    </script>
+</body>
+</html>

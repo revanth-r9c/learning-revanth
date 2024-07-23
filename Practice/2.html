@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let studentObj={
+            name:"Revanth",
+            roll_no:42,
+            marks:97,
+            age:21,
+            address:"Guntur"
+        }
+        for(let i in studentObj){
+            alert(`${i}: ${studentObj[i]}`);
+        }
+
+        let arrayObj=["Revanth",42,97,21,"Guntur"];
+        alert(arrayObj);
+
+        function greet(name){
+            alert("Hello, Mr. "+name);
+            alert(`Good Morning, ${name}. Have a nice day`);
+        }
+        greet("Revanth");
+    </script>
+</body>
+</html>

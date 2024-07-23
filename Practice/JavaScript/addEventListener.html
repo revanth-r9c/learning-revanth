@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>addEventListener</title>
+</head>
+<body>
+    <div id="container">Click here</div>
+    <button ondblclick="removeEvent()">remove event</button>
+    <script type="text/javascript">
+        let ref=document.getElementById("container");
+        ref.addEventListener("dblclick",showMsgOne);
+        ref.addEventListener("dblclick",showMsgTwo);
+        function showMsgOne(){
+            alert("This is message one");
+        }
+        function showMsgTwo(){
+            alert("This is message two");
+        }
+        function removeEvent(){
+            ref.removeEventListener("dblclick",showMsgOne);
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        (
+            function(){
+                alert("Hey u called me witout invoking");
+            }
+        )();
+        function outerFunc(param){
+            function innerFunc(input){
+                return input*4;
+            }
+            return 'The result is'+innerFunc(param);
+        }
+        outerFunc(12);
+        function test(){
+            alert('inside test');
+            return function(){
+                alert("Inside the function");
+            }
+        }
+        var newfunc=test();
+        console.log(newfunc());
+
+        function outerFunc(param){
+            var privateVar=5;
+            var innerFunc=function(input){
+                alert('param passed to function is '+param+'and private variable is '+privateVar);
+                var sum=privateVar+input+param;
+                alert('addition of private and input and param is '+sum);
+            }
+            return innerFunc;
+        }
+        var closureFunc=outerFunc(12);
+        closureFunc(4);
+    </script>
+</body>
+</html>

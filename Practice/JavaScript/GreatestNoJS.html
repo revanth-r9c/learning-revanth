@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function greatest(){
+            let max=arguments[0];
+            let size=arguments.length;
+            for(let i=0;i<size;i++){
+                if(arguments[i]>max){
+                    max=arguments[i];
+                }
+            }
+            return max;
+        }
+        function sumEven(){
+            let evensum=0;
+            let size=arguments[0];
+            let count=0;
+            let i=2;
+            while(count<size){
+                evensum+=i;
+                i=i+2;
+                count++;
+            }
+            return evensum;
+        }
+        console.log(greatest(10,20,30,199));
+        console.log(sumEven(3));
+    </script>
+</body>
+</html>

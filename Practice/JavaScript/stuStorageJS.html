@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" placeholder="Name" id="name">
+    <input type="text" placeholder="Native" id="native">
+    <input type="text" placeholder="Age" id="age">
+    <button onclick="save()">Save Details</button>
+    <button onclick="display()">Display Details</button>
+    <script>
+        let stuOb={};
+        function save(){
+            let nameOb=document.querySelector("#name");
+            let nativeOb=document.querySelector("#native");
+            let ageOb=document.querySelector("#age");
+            stuOb.name= nameOb.value,
+            stuOb.native= nativeOb.value,
+            stuOb.age= ageOb.value
+            alert("Saved Successfully!!");
+        }
+        function display(){
+            let stuObJson=JSON.stringify(stuOb);
+            localStorage.setItem("stu_details",stuObJson);
+            let convertedBackstu=JSON.parse(stuObJson);
+            for(i in convertedBackstu){
+                alert(convertedBackstu[i]);
+            }
+        }
+    </script>
+</body>
+</html>

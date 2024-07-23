@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let scores=new Array();
+        let marks=Array(10);
+        let names=new Array("revanth","ramu","raju","reddy");
+        let emptyArray=[];
+        let mountains=['Everest','Fuji','Nanga Parbat'];
+        alert(mountains[0]);
+        alert(mountains[1]);
+        alert(mountains[2]);
+        mountains[2]="Heat";
+        alert(mountains);
+        alert(mountains.length);
+
+        let seas=['Black Sea','Caribbean Sea', 'North Sea', 'Baltic Sea'];
+        seas.push('Red Sea');
+        alert(seas);
+        seas.unshift("Violet Sea");
+        alert(seas);
+        const sea=seas.push();
+        const sea1=seas.shift();
+        let NorthIdx=seas.indexOf('North Sea');
+    </script>
+</body>
+</html>

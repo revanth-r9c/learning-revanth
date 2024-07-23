@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let ob={
+            name:"sumit",
+            location:"sikkim"
+        }
+        let studentOb=object.create(ob);
+        studentOb.course="Full Stack";
+        studentOb.showCompany=function(){
+            alert("Its Ascendion");
+        }
+        alert(studentOb.location);
+        studentOb.showCompany();
+    </script>
+</body>
+</html>
