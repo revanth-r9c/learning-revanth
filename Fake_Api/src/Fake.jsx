@@ -15,7 +15,6 @@ function Fake() {
     }, []);
 
     useEffect(() => {
-        // Filter products based on the selected category
         if (selectedCategory === 'All') {
             setFilteredDetails(details);
         } else {
@@ -30,7 +29,6 @@ function Fake() {
                 console.log(response.data);
                 setDetails(response.data);
 
-                // Extract unique categories
                 const uniqueCategories = ['All', ...new Set(response.data.map(product => product.category))];
                 setCategories(uniqueCategories);
             })
@@ -41,15 +39,13 @@ function Fake() {
 
     function handleCategoryClick(category) {
         setSelectedCategory(category);
-        // Optionally, you can navigate to a URL based on the category
-        // navigate(`/category/${category}`);
+
     }
 
     return (
         <div className="fake">
             <h1>Fake Store Details</h1>
 
-            {/* Category filter */}
             <div className="category-filter">
                 {categories.map(cat => (
                     <button
@@ -62,7 +58,6 @@ function Fake() {
                 ))}
             </div>
 
-            {/* Product list */}
             <div className="product-list">
                 {filteredDetails.map((val, index) => (
                     <div key={index} className="product-card">
