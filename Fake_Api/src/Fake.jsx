@@ -64,7 +64,7 @@ function Fake() {
 
             {/* Product list */}
             <div className="product-list">
-                {filteredDetails.map(function (val, index) { (
+                {filteredDetails.map((val, index) => (
                     <div key={index} className="product-card">
                         <b>Title:</b> {val.title}
                         <div>
@@ -85,7 +85,7 @@ function Fake() {
                         </div>
                         <button onClick={() => navigate(`/AllProducts/${val.id}`)}>Details</button>
                     </div>
-                )})}
+                ))}
             </div>
         </div>
     );
