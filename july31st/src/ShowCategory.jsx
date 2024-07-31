@@ -22,7 +22,32 @@ function ShowCategory() {
         navigate(`/products/${productId}`);
     }
 
-   
+    function DeleteProducts(index){
+        console.log(index);
+        axios
+            .delete(`http://localhost:3000/api/v1/products/${index}`)
+            .then(function(response)
+            {
+                console.log(response);
+                displayProducts();
+            })
+            .catch(function(error)
+            {
+                console.log(error);
+            });
+        let newIds = data.filter(function (i)
+        {
+            if(index == i)
+            {
+                return false;
+            }
+            else
+            {
+                return true;
+            }
+        });
+    setData(newIds);
+    }
 
     const handleButtonClick = () => {
         navigate('/addproduct');
