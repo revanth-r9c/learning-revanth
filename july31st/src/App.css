@@ -1,0 +1,34 @@
+button{
+    font-size: medium;
+  }
+  .Routes a,button{
+    margin:10px;
+    padding:10px;
+    border: 2px solid black;
+    text-decoration: none;
+    background-color: antiquewhite;
+    border-radius: 12px;
+  }
+  .Routes a:hover,button:hover{
+    background-color: black;
+    border-color: red;
+    color: white;
+    scale:1.19;
+    font-size: medium;
+    box-shadow: 1px 2px rgba(255, 0, 0,0.6);
+  }
+  
+  .addproducts{
+    width:fit-content;
+    margin:auto;
+    padding: 20px;
+    border: 4px solid blueviolet;
+  }
+  #submit{
+    margin-left: 150px;
+  }
+  h1{
+    text-align: center;
+    background-color: bisque;
+    border: 1px solid black;
+  }
