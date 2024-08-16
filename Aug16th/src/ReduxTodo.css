@@ -1,0 +1,77 @@
+/* input[type="text"],select,button{
+    width: 30%;
+    margin: auto;
+    border: 1px solid black;
+    border-radius: 4px;
+}
+button, form button{
+    width: fit-content;
+    background-color: blue;
+}
+#edit{
+    background-color: green;
+    margin-right: 10px;
+} */
+
+
+div {
+    margin: 20px;
+}
+
+form {
+    margin-bottom: 20px;
+}
+
+input[type="text"] {
+    width: 30%;
+    margin: auto;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+select {
+    width: 30%;
+    margin: auto;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+button {
+    padding: 8px 16px;
+    border: none;
+    width: 30%;
+    margin: auto;
+    border-radius: 4px;
+    background-color: #007bff;
+    color: white;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+button#edit {
+    width: fit-content;
+    background-color: #28a745;
+}
+
+button#delete {
+    width: fit-content;
+    margin-left: 15px;
+    background-color: #dc3545;
+}
+
+.todo-item {
+    padding: 10px;
+    
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    width: fit-content;
+    margin: auto;
+    margin-bottom: 15px;
+    background-color: #f9f9f9;
+}
+
+.todo-item div {
+    margin-bottom: 5px;
+}
