@@ -102,6 +102,7 @@ import { ServerComponent } from './server/server.component';
 import { AppContactComponent } from './app-contact/app-contact.component';
 import { AppAdminComponent } from './app-admin/app-admin.component';
 import { AddproductComponent } from './addproduct/addproduct.component';
+import { AppLoginComponent } from './app-login/app-login.component';
 // import { AppAddProductComponent } from './app-add-product/app-add-product.component';
 
 
@@ -118,6 +119,7 @@ import { AddproductComponent } from './addproduct/addproduct.component';
     AppContactComponent,
     AppAdminComponent,
     AddproductComponent,
+    AppLoginComponent
     // AppAddProductComponent
   ],
   imports: [

@@ -8,8 +8,8 @@ import { Component } from '@angular/core';
 export class AppMenuComponent {
   items = [
     { title: "Home", path: "/home" },
-    { title: "Admin", path: "/admin" },
-    { title: "Contact", path: "/contact" },
-    {title:"AddProduct",path:"/addproduct"},
+    { title: "Admin", path: "/admin"},
+    { title: "Contact", path: "/contact"},
+    { title:"AddProduct",path:"/addproduct"},
   ];
 }

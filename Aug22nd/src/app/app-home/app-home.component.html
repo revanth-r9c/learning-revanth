@@ -1,5 +1,16 @@
-<div class="product-list">
+<!-- <div class="product-list">
   <div class="product-box" *ngFor="let product of products">
+    <p><strong>Name:</strong> {{ product.name }}</p>
+    <p><strong>Description:</strong> {{ product.excerpt }}</p>
+    <p><strong>Price:</strong> {{ product.price }}</p>
+    <p><strong>Code:</strong> {{ product.code }}</p>
+  </div>
+</div>
+<app-footer/> -->
+
+
+<div class="product-list">
+  <div class="product-box" *ngFor="let product of products" [ngStyle]="{'background-color': getRandomLightColor()}">
     <p><strong>Name:</strong> {{ product.name }}</p>
     <p><strong>Description:</strong> {{ product.excerpt }}</p>
     <p><strong>Price:</strong> {{ product.price }}</p>

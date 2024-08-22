@@ -38,14 +38,25 @@ import { BooksComponent } from './books/books.component';
 import { AppContactComponent } from './app-contact/app-contact.component';
 import { AppAdminComponent } from './app-admin/app-admin.component';
 import { AddproductComponent } from './addproduct/addproduct.component';
+import { AppLoginComponent } from './app-login/app-login.component';
 
 const routes: Routes = [
+  { 
+    path: "", 
+    redirectTo: '/login', 
+    pathMatch: 'full', 
+  },
+
+  { 
+    path: 'login', 
+    component: AppLoginComponent 
+  },
+  
   { 
     path: "home", 
     title: "home",
     component: AppHomeComponent ,
   },
-
   // { path: '', redirectTo: '/home', pathMatch: 'full' }
 
   // {

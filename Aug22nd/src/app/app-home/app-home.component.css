@@ -14,8 +14,10 @@
     width: 300px;
     background-color: white;
     text-align: justify;
+    color: #333;
   }
   
   .product-box:hover{
-    scale: 1.02;
+    scale: 1.04;
+    cursor: pointer;
   }
