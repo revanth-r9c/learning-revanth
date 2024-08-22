@@ -1,0 +1,9 @@
+<div class="category-list">
+    <div class="category-box" *ngFor="let category of categories">
+      <h3><strong>ID:</strong> {{ category._id }}</h3>
+      <p><strong>Name:</strong> {{ category.name }}</p>
+      <p><strong>Description:</strong> {{ category.description }}</p>
+    </div>
+</div>
+<app-footer/>
+  
