@@ -1,0 +1,97 @@
+/* CartPage.css */
+
+.CartPage {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    padding: 20px;
+    max-width: 900px;
+    margin: 0 auto;
+    background-color: #f4f7f9;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.CartPage h2 {
+    font-size: 26px;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.CartPage input[type='text'] {
+    width: calc(100% - 22px);
+    padding: 12px;
+    margin-bottom: 20px;
+    font-size: 16px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.CartPage input[type='text']:focus {
+    border-color: #007bff;
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.25);
+    outline: none;
+}
+
+.CartPage .CartItem {
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    padding: 15px;
+    margin-bottom: 15px;
+    background-color: #ffffff;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.CartPage .CartItem:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+}
+
+.CartPage .CartItem p {
+    margin: 5px 0;
+    color: #555;
+}
+
+.CartPage h3 {
+    font-size: 22px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.CartPage button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 12px 24px;
+    font-size: 16px;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.CartPage button:hover {
+    background-color: #0056b3;
+    transform: scale(1.05);
+}
+
+.CartPage button:active {
+    background-color: #004085;
+    transform: scale(1.02);
+}
+
+.CartPage .CartItem .product-name {
+    font-weight: bold;
+    color: #333;
+}
+
+.CartPage .CartItem .product-quantity,
+.CartPage .CartItem .product-price {
+    color: #777;
+}
+
+
+.CartPage button:disabled {
+    background-color: #6c757d; /* Gray color for disabled state */
+    cursor: not-allowed;
+    opacity: 0.6;
+}
