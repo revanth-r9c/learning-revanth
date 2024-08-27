@@ -1,0 +1,9 @@
+<div class="category-list">
+    <div class="category-box" *ngFor="let category of categories" [ngStyle]="{'background-color': getRandomLightColor()}">
+      <p><strong>ID:</strong> {{ category._id }}</p>
+      <p><strong>Name:</strong> {{ category.name }}</p>
+      <p><strong>Description:</strong> {{ category.description }}</p>
+    </div>
+</div>
+<app-footer/>
+  
