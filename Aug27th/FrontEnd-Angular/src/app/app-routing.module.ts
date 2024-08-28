@@ -40,6 +40,7 @@ import { AppAdminComponent } from './app-admin/app-admin.component';
 import { AddproductComponent } from './addproduct/addproduct.component';
 import { AppLoginComponent } from './app-login/app-login.component';
 import { ProductEditComponent } from './product-edit/product-edit.component';
+import { ProductCreateComponent } from './product-create/product-create.component';
 
 const routes: Routes = [
   { 
@@ -61,6 +62,10 @@ const routes: Routes = [
   { 
     path: 'edit/:id', 
     component: ProductEditComponent 
+  },
+  { 
+    path: 'create', 
+    component: ProductCreateComponent 
   },
   // { path: '', redirectTo: '/home', pathMatch: 'full' }
 

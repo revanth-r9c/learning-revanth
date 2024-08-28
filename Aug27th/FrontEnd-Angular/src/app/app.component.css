@@ -19,3 +19,15 @@
    justify-content: center;
    background-color: orange;
 }
+
+/* Light Theme Styles */
+body {
+   background-color: #fff;
+   color: #000;
+ }
+ 
+ /* Dark Theme Styles */
+ body.dark-theme {
+   background-color: #333;
+   color: #fff;
+ }

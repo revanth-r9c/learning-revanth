@@ -1,12 +1,11 @@
 .product-edit-container {
-  max-width: 600px;
-  margin: 0 auto;
-  padding: 20px;
-  border-radius: 8px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  background-color: #f5f5f5;
-  text-align: center;
-}
+    max-width: 600px;
+    margin: 20px auto;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    background-color: #f5f5f5;
+  }
   
 .product-edit-container h2 {
   text-align: center;
@@ -27,7 +26,7 @@
 }
   
 .product-edit-container input[type="text"],
-.product-edit-container input[type="number"], #availability {
+.product-edit-container input[type="number"], #availability{
   padding: 10px;
   font-size: 16px;
   border: 1px solid #ddd;
@@ -36,18 +35,17 @@
 }
   
 .product-edit-container button {
-  padding: 10px;
-  border: none;
+  padding: 10px 20px;
   font-size: 16px;
   color: #fff;
   background-color: #007bff;
+  border: none;
   border-radius: 4px;
   cursor: pointer;
+  transition: background-color 0.3s ease;
 }
   
-.product-edit-container p {
-  text-align: center;
-  font-size: 18px;
-  color: #888;
+.product-edit-container button:hover {
+  background-color: #0056b3;
 }
   

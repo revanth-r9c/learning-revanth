@@ -1,26 +1,26 @@
 .product-list {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    margin: 15px 0px;
-  }
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin: 15px 0px;
+}
   
-  .product-box {
-    border: 1px solid #ddd;
-    padding: 15px;
-    margin: 10px;
-    border-radius: 10px;
-    box-shadow: 3 3 5px rgba(0,0,0,0.1);
-    width: 300px;
-    background-color: white;
-    text-align: justify;
-    color: #333;
-  }
+.product-box {
+  border: 1px solid #ddd;
+  padding: 15px;
+  margin: 10px;
+  border-radius: 10px;
+  box-shadow: 3 3 5px rgba(0,0,0,0.1);
+  width: 300px;
+  background-color: white;
+  text-align: justify;
+  color: #333;
+}
   
-  .product-box:hover{
-    scale: 1.04;
-    cursor: pointer;
-  }
+.product-box:hover{
+  scale: 1.04;
+  cursor: pointer;
+}
 
 .search-container {
   align-items: center;
@@ -83,4 +83,29 @@ button {
 .delete-button {
   background-color: #dc3545;
   color: #fff;
+}
+
+body {
+  background-color: #fff;
+  color: #000;
+}
+
+.dark-theme {
+  background-color: #333;
+  color: #fff;
+}
+
+.dark-theme .product-box {
+  border: 1px solid #555;
+  background-color: #555;
+}
+
+.theme-toggle-container {
+  margin: 20px 0;
+}
+
+.theme-toggle-container button {
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
 }

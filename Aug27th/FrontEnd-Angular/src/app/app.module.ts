@@ -104,6 +104,7 @@ import { AppAdminComponent } from './app-admin/app-admin.component';
 import { AddproductComponent } from './addproduct/addproduct.component';
 import { AppLoginComponent } from './app-login/app-login.component';
 import { ProductEditComponent } from './product-edit/product-edit.component';
+import { ProductCreateComponent } from './product-create/product-create.component';
 // import { AppAddProductComponent } from './app-add-product/app-add-product.component';
 
 
@@ -121,7 +122,8 @@ import { ProductEditComponent } from './product-edit/product-edit.component';
     AppAdminComponent,
     AddproductComponent,
     AppLoginComponent,
-    ProductEditComponent
+    ProductEditComponent,
+    ProductCreateComponent
     // AppAddProductComponent
   ],
   imports: [

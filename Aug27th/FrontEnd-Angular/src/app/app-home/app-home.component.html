@@ -1,4 +1,4 @@
-<div class="search-container">
+<!-- <div class="search-container">
   <input 
     type="text" 
     placeholder="Search..." 
@@ -31,4 +31,44 @@
   <p>No products found.</p>
 </div>
 
+<app-footer></app-footer> -->
+
+<div class="search-container">
+  <input 
+    type="text" 
+    placeholder="Search..." 
+    [(ngModel)]="searchTerm"
+  />
+
+  <select [(ngModel)]="searchBy">
+    <option value="name">Search by Name</option>
+    <option value="price">Search by Price</option>
+    <option value="availability">Search by Availability</option>
+  </select>
+
+  <button (click)="search()">Search</button>
+</div>
+
+<div>
+  <a routerLink="/create" class="create-product-button">Create Product</a>
+</div>
+
+<div class="product-list" *ngIf="filteredProducts.length > 0">
+  <div class="product-box" *ngFor="let product of filteredProducts" [ngStyle]="{'background-color': getRandomLightColor()}">
+    <h2>{{ product.name }}</h2>
+    <p>Price: {{ product.price | currency }}</p>
+    <p>Availability: {{ product.availability }}</p>
+
+    <div class="product-actions">
+      <button (click)="editProduct(product._id)" class="edit-button">Edit</button>
+      <button (click)="deleteProduct(product._id)" class="delete-button">Delete</button>
+    </div>
+  </div>
+</div>
+
+<div *ngIf="filteredProducts.length === 0">
+  <p>No products found.</p>
+</div>
+
 <app-footer></app-footer>
+

@@ -1,6 +1,6 @@
-<div class="product-edit-container" *ngIf="product">
-    <h2>Edit Product</h2>
-    <form (ngSubmit)="saveProduct()">
+<div class="product-edit-container">
+    <h2>Create Product</h2>
+    <form (ngSubmit)="createProduct()">
       <div>
         <label for="name">Name:</label>
         <input id="name" [(ngModel)]="product.name" name="name" type="text" required />
@@ -16,11 +16,7 @@
           <option value="not available">not available</option>
         </select>
       </div>
-      <button type="submit">Save</button>
+      <button type="submit">Create</button>
     </form>
-  </div>
-  <div *ngIf="!product">
-    <p>Loading...</p>
-  </div>
+</div>
   
-  <app-footer/>
