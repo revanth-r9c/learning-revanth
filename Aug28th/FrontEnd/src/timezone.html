@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Date Formatting</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.30.1/moment.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment-timezone/0.5.38/moment-timezone-with-data.min.js"></script>
+</head>
+<body>
+    <h3>User Data</h3>
+    <pre id="output"></pre>
+    <script>
+        async function formatUserDates() {
+            try {
+                const response = await fetch('http://localhost:3000/api/v1/users');
+                const data = await response.json();
+                const users = data.users;
+
+                if (!users || users.length === 0) {
+                    document.getElementById('output').textContent = 'No users data found.';
+                    return;
+                }
+
+                const timezone = 'Asia/Kolkata'; 
+
+                const formattedUsers = users.map(user => {
+                    const formattedDate = moment.tz(user.created_at, timezone).format('DDMMMYYYY'); 
+                    return {
+                        ...user,
+                        created_at: formattedDate
+                    };
+                });
+
+                document.getElementById('output').textContent = JSON.stringify(formattedUsers, null, 2);
+            } catch (error) {
+                console.error('Error fetching or formatting user data:', error);
+            }
+        }
+
+        formatUserDates();
+    </script>
+</body>
+</html>

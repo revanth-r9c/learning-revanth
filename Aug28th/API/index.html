@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>File Uploads</title>
+</head>
+<body>
+  <h1>Upload Profile Images</h1>
+  <form action="/upload-profile-images" method="post" enctype="multipart/form-data">
+    <input type="file" name="images" accept=".jpg,.jpeg,.gif" multiple required>
+    <button type="submit">Upload Images</button>
+  </form>
+
+  <h1>Upload Resume</h1>
+  <form action="/upload-resume" method="post" enctype="multipart/form-data">
+    <input type="file" name="resume" accept=".doc,.docx,.pdf" required>
+    <button type="submit">Upload Resume</button>
+  </form>
+
+  <h1>Upload Video</h1>
+  <form action="/upload-video" method="post" enctype="multipart/form-data">
+    <input type="file" name="video" accept=".mp4,.wmv" required>
+    <button type="submit">Upload Video</button>
+  </form>
+</body>
+</html>
