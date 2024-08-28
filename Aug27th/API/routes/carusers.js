@@ -1,18 +1,18 @@
 const express = require('express');
 const router = express.Router();
 
-const { PostCarUsers, GetCarUsers, GetCarUsersById, EditCarUsers, PatchCarUsers, DeleteCarUsers } = require('../controllers/carusers');
+const { postCarUsers, getCarUsers, getCarUsersById, editCarUsers, patchCarUsers, deleteCarUsers } = require('../controllers/carusers');
 
-router.post('/', PostCarUsers);
+router.post('/', postCarUsers);
 
-router.get('/', GetCarUsers);
+router.get('/', getCarUsers);
 
-router.get('/:id', GetCarUsersById);
+router.get('/:id', getCarUsersById);
 
-router.put('/:id',  EditCarUsers);
+router.put('/:id',  editCarUsers);
 
-router.patch('/:id', PatchCarUsers);
+router.patch('/:id', patchCarUsers);
 
-router.delete('/:id', DeleteCarUsers);
+router.delete('/:id', deleteCarUsers);
 
 module.exports = router;

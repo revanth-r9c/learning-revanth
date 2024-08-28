@@ -39,6 +39,7 @@ import { AppContactComponent } from './app-contact/app-contact.component';
 import { AppAdminComponent } from './app-admin/app-admin.component';
 import { AddproductComponent } from './addproduct/addproduct.component';
 import { AppLoginComponent } from './app-login/app-login.component';
+import { ProductEditComponent } from './product-edit/product-edit.component';
 
 const routes: Routes = [
   { 
@@ -56,6 +57,10 @@ const routes: Routes = [
     path: "home", 
     title: "home",
     component: AppHomeComponent ,
+  },
+  { 
+    path: 'edit/:id', 
+    component: ProductEditComponent 
   },
   // { path: '', redirectTo: '/home', pathMatch: 'full' }
 

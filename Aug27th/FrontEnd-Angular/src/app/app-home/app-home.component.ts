@@ -266,7 +266,7 @@
 
 import { Component } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-import { Router } from '@angular/router'; // Import Router for navigation
+import { Router } from '@angular/router'; 
 
 interface Product {
   _id: string;
@@ -284,7 +284,7 @@ export class AppHomeComponent {
   products: Product[] = [];
   filteredProducts: Product[] = [];
   searchTerm: string = '';
-  searchBy: string = 'name'; // Default search by name
+  searchBy: string = 'name'; 
 
   constructor(private http: HttpClient, private router: Router) {
     this.getData();
@@ -295,10 +295,10 @@ export class AppHomeComponent {
       (response) => {
         this.products = response;
         this.filteredProducts = response;
-        console.log('Products:', this.products);  // For debugging
+        console.log('Products:', this.products); 
       },
       (error) => {
-        console.error('Error fetching data:', error);  // For debugging
+        console.error('Error fetching data:', error);  
       }
     );
   }
@@ -313,7 +313,7 @@ export class AppHomeComponent {
     this.http.get<Product[]>(searchUrl).subscribe(
       (response) => {
         this.filteredProducts = response;
-        console.log('Search results:', this.filteredProducts);  // For debugging
+        console.log('Search results:', this.filteredProducts);  
       },
       (error) => {
         console.error('Error fetching search data:', error);
@@ -323,7 +323,7 @@ export class AppHomeComponent {
   }
 
   getSearchUrl(): string {
-    const baseUrl = 'http://localhost:3000';
+    const baseUrl = 'http://localhost:3000/product';
     switch (this.searchBy) {
       case 'name':
         return `${baseUrl}/search/${this.searchTerm}`;
@@ -337,14 +337,13 @@ export class AppHomeComponent {
   }
 
   editProduct(productId: string) {
-    // Navigate to an edit page or open a modal for editing
-    this.router.navigate(['/edit', productId]); // Assuming you have a route for editing
+    this.router.navigate(['/edit', productId]); 
   }
 
   deleteProduct(productId: string) {
     this.http.delete(`http://localhost:3000/product/${productId}`).subscribe(
       () => {
-        this.getData(); // Refresh the product list
+        this.getData(); 
         console.log('Product deleted');
       },
       (error) => {

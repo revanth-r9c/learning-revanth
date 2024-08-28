@@ -1,0 +1,23 @@
+<div class="product-edit-container" *ngIf="product">
+    <h2>Edit Product</h2>
+    <form (ngSubmit)="saveProduct()">
+      <div>
+        <label for="name">Name:</label>
+        <input id="name" [(ngModel)]="product.name" name="name" type="text" required />
+      </div>
+      <div>
+        <label for="price">Price:</label>
+        <input id="price" [(ngModel)]="product.price" name="price" type="number" required />
+      </div>
+      <div>
+        <label for="availability">Availability:</label>
+        <input id="availability" [(ngModel)]="product.availability" name="availability" type="text" />
+      </div>
+      <button type="submit">Save</button>
+    </form>
+  </div>
+  <div *ngIf="!product">
+    <p>Loading...</p>
+  </div>
+  
+  <app-footer/>

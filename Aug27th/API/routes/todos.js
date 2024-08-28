@@ -154,49 +154,49 @@
 const express = require('express');
 const { body, param, validationResult } = require('express-validator');
 const router = express.Router();
-const { PostTodos, GetTodos, GetTodosById, EditTodos, DeleteTodos } = require('../controllers/todos');
+const { postTodos, getTodos, getTodosById, editTodos, deleteTodos } = require('../controllers/todos');
 
 const todoValidationRules = () => {
-    return [
-        body('name')
-            .trim() 
-            .notEmpty().withMessage('Name is required')
-            .isLength({ min: 1 }).withMessage('Name must not be empty'),
-        body('status')
-            .trim() 
-            .notEmpty().withMessage('Status is required')
-            .isIn(['incomplete', 'complete']).withMessage('Status must be either incomplete or complete'),
-        body('description')
-            .optional() 
-            .trim()
-            .escape() 
-            .isLength({ max: 1000 }).withMessage('Description must be less than 1000 characters')
+  return [
+    body('name')
+      .trim() 
+      .notEmpty().withMessage('Name is required')
+      .isLength({ min: 1 }).withMessage('Name must not be empty'),
+    body('status')
+      .trim() 
+      .notEmpty().withMessage('Status is required')
+      .isIn(['incomplete', 'complete']).withMessage('Status must be either incomplete or complete'),
+    body('description')
+      .optional() 
+      .trim()
+      .escape() 
+      .isLength({ max: 1000 }).withMessage('Description must be less than 1000 characters')
     ];
 };
 
 const validate = (req, res, next) => {
-    const errors = validationResult(req);
-    if (!errors.isEmpty()) {
-        return res.status(400).json({ errors: errors.array() });
-    }
-    next();
+  const errors = validationResult(req);
+  if (!errors.isEmpty()) {
+    return res.status(400).json({ errors: errors.array() });
+  }
+  next();
 };
 
-router.post('/', todoValidationRules(), validate, PostTodos);
+router.post('/', todoValidationRules(), validate, postTodos);
 
-router.get('/', GetTodos);
+router.get('/', getTodos);
 
 router.get('/:id', [
-    param('id').isMongoId().withMessage('Invalid ID format') 
-], validate, GetTodosById);
+  param('id').isMongoId().withMessage('Invalid ID format') 
+], validate, getTodosById);
 
 router.put('/:id', [
-    param('id').isMongoId().withMessage('Invalid ID format'), 
-    ...todoValidationRules() 
-], validate, EditTodos);
+  param('id').isMongoId().withMessage('Invalid ID format'), 
+  ...todoValidationRules() 
+], validate, editTodos);
 
 router.delete('/:id', [
-    param('id').isMongoId().withMessage('Invalid ID format') 
-], validate, DeleteTodos);
+  param('id').isMongoId().withMessage('Invalid ID format') 
+], validate, deleteTodos);
 
 module.exports = router;

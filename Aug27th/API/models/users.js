@@ -1,4 +1,4 @@
-var mongoose = require("mongoose");
+var mongoose = require('mongoose');
 //getting Schema class from mongoose.Schema
 var Schema = mongoose.Schema;
 const UserSchema = Schema({
@@ -24,4 +24,4 @@ const UserSchema = Schema({
   },
 });
 
-module.exports = mongoose.model("user", UserSchema);
+module.exports = mongoose.model('user', UserSchema);

@@ -110,10 +110,10 @@ app.use('/category', categoryRouter);
 let mongoConnUrl = "mongodb://localhost/ascendion";
 mongoose.connect(mongoConnUrl);
 let db = mongoose.connection;
-db.on("error",function(){
+db.on("error", function() {
   console.log("Error came in connecting");
 });
-db.on("connected",function(){
+db.on("connected", function() {
   console.log("connected to mongoose Database named ascendion");
 });
 

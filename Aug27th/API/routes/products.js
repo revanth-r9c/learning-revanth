@@ -16,6 +16,6 @@ router.get('/search/:name', productController.searchProductByName);
 
 router.get('/price/:price', productController.findProductsHigherThanPrice);
 
-router.get('/availablity/:availability', productController.getProductByAvailability);
+router.get('/availability/:availability', productController.getProductByAvailability);
 
 module.exports = router;
