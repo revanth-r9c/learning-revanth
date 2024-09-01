@@ -1,0 +1,35 @@
+// {
+//   "kind": "collectionType",
+//   "collectionName": "login",
+//   "info": {
+//     "singularName": "login",
+//     "pluralName": "logins",
+//     "displayName": "Login"
+//   },
+//   "options": {
+//     "draftAndPublish": false,
+//     "comment": ""
+//   },
+
+//   "pluginOptions": {
+//     "content-manager": {
+//       "visible": true
+//     },
+
+//     "content-type-builder": {
+//       "visible": true
+//     }
+//   },
+
+//   "attributes": {
+//     "name": {
+//       "type": "string",
+//       "required": true,
+//       "maxLength": 40
+//     },
+//     "email": {
+//       "type": "string",
+//       "default": false
+//     }
+//   }
+// }
