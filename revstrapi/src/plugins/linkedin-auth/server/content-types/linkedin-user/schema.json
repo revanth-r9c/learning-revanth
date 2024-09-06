@@ -1,0 +1,24 @@
+{
+  "kind": "collectionType",
+  "collectionName": "linkedin_users",
+  "info": {
+    "singularName": "linkedin-user",
+    "pluralName": "linkedin-users",
+    "displayName": "LinkedIn User",
+    "description": "Stores LinkedIn user details"
+  },
+  "options": {
+    "draftAndPublish": false,
+    "comment": ""
+  },
+  "attributes": {
+    "name": {
+      "type": "string",
+      "required": true
+    },
+    "email": {
+      "type": "email",
+      "required": true
+    }
+  }
+}
